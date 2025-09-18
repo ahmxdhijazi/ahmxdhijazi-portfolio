@@ -1,10 +1,13 @@
+import { TypingAnimation } from "@/components/ui/typing-animation";
+
 export default function Home() {
   return (
+    /* main container */
     <div className="flex min-h-screen flex-col">
       <div className="flex flex-col items-center p-5">
-        <ul className="menu menu-horizontal bg-black rounded-box">
+        <ul className="menu menu-horizontal bg-black-200 rounded-box mt-6">
           <li>
-            <a>
+            <a className="tooltip" data-tip="Home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -22,7 +25,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a>
+            <a className="tooltip" data-tip="Details">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -40,7 +43,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a>
+            <a className="tooltip" data-tip="Resume">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -58,6 +61,10 @@ export default function Home() {
             </a>
           </li>
         </ul>
+      </div>
+
+      <div>
+        <TypingAnimation>Ahmad Dommar Hijazi</TypingAnimation>
       </div>
     </div>
   );
