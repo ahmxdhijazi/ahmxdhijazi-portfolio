@@ -34,17 +34,17 @@ export default function Home() {
       <nav className="fixed top-5 right-5 z-50">
         <ul className="menu menu-horizontal bg-gray-900 rounded-lg shadow-md space-x-4 p-2">
           <li>
-            <a href="#about" className="hover:text-purple-400 transition">
+            <a href="#about" className="hover:text-orange-400 transition">
               About
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:text-purple-400 transition">
+            <a href="#projects" className="hover:text-orange-400 transition">
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-purple-400 transition">
+            <a href="#contact" className="hover:text-orange-400 transition">
               Contact
             </a>
           </li>
@@ -73,7 +73,9 @@ export default function Home() {
         className="py-20 px-6 md:px-20 lg:px-32 bg-gray-900"
       >
         <h2 className="text-4xl font-bold text-white mb-8 text-center">
-          Projects
+          <TypingAnimation className="text-6xl md:text-8xl font-bold tracking-tight">
+            Projects
+          </TypingAnimation>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
@@ -115,6 +117,19 @@ export default function Home() {
               </CardContent>
             </Card>
           </motion.div>
+          <motion.div
+            whileHover={{ y: -5, scale: 1.02 }}
+            transition={{ type: "spring", damping: 10 }}
+          >
+            <Card className="bg-gray-800 border border-gray-700 shadow-lg overflow-hidden">
+              <CardContent>
+                <h3 className="text-2xl font-semibold mb-2">Project Four</h3>
+                <p className="text-gray-400">
+                  What this project involved, what’s special about it.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
       {/* Contact / Footer */}
@@ -125,16 +140,16 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+          <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
           <p className="text-gray-300 mb-6">
-            I’m currently open to opportunities. Let’s build something great
-            together.
+            Feel Free to contact me about opportunities, projects,
+            collaborations, or just to say hello!
           </p>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:ahmad.d.hijazi@gmail.com"
             className="btn btn-primary px-8 py-4 text-lg"
           >
-            Say Hello
+            Say Whatsup!
           </a>
         </motion.div>
       </footer>
